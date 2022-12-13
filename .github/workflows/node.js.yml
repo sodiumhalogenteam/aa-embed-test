@@ -17,7 +17,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Use Node.js
         uses: actions/setup-node@v3
+      - run: ll
       - run: cd frontend/
+      - run: ll
       - run: npm run build --if-present
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
