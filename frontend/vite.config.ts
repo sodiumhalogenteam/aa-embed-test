@@ -7,10 +7,12 @@ export default defineConfig({
   base: "./",
   plugins: [react()],
   build: {
+    target: "modules",
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, "./src/App.tsx"),
       name: "AANewFeatures",
+      formats: ["umd"],
       // the proper extensions will be added
       fileName: "aa-new-features",
     },
@@ -25,8 +27,16 @@ export default defineConfig({
     //       react: 'React',
     //     },
     //   },
-    //   },
+    // },
   },
+  define: {
+    process: JSON.stringify({
+      env: {
+        NODE_ENV: "production",
+      },
+    }),
+  },
+  appType: "custom",
   // "process.env.NODE_ENV": "production",
   // or 'process.env.NODE_ENV': "development",
 });
