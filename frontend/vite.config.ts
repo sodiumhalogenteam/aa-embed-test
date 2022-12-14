@@ -17,14 +17,15 @@ export default defineConfig({
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ['react'],
+      external: ["react"],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
-          react: 'React',
+          react: "React",
         },
       },
+    },
   },
   // "process.env.NODE_ENV": "production",
   // or 'process.env.NODE_ENV': "development",
