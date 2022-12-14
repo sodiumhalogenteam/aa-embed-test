@@ -14,18 +14,18 @@ export default defineConfig({
       // the proper extensions will be added
       fileName: "aa-new-features",
     },
-    rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
-      external: ["react"],
-      output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
-        globals: {
-          react: "React",
-        },
-      },
-    },
+    // rollupOptions: {
+    //   // make sure to externalize deps that shouldn't be bundled
+    //   // into your library
+    //   external: ['react'],
+    //   output: {
+    //     // Provide global variables to use in the UMD build
+    //     // for externalized deps
+    //     globals: {
+    //       react: 'React',
+    //     },
+    //   },
+    //   },
   },
   // "process.env.NODE_ENV": "production",
   // or 'process.env.NODE_ENV': "development",
