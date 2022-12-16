@@ -7,7 +7,8 @@ interface AppProps {
 function App(props: AppProps) {
   return (
     <div className="App">
-      Inner app here {props.user.userId}v{VERSION}
+      Inner app: USER_ID 👉 {props.user.userId}
+      <div>v{VERSION}</div>
     </div>
   );
 }
