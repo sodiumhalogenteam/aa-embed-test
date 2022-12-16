@@ -1,10 +1,10 @@
-var Y = { exports: {} }, S = {}, N = { exports: {} }, r = {};
+var G = { exports: {} }, S = {}, D = { exports: {} }, r = {};
 var z;
-function Z() {
+function ee() {
   if (z)
     return r;
   z = 1;
-  var a = Symbol.for("react.element"), b = Symbol.for("react.portal"), O = Symbol.for("react.fragment"), j = Symbol.for("react.strict_mode"), C = Symbol.for("react.profiler"), I = Symbol.for("react.provider"), E = Symbol.for("react.context"), m = Symbol.for("react.forward_ref"), p = Symbol.for("react.suspense"), k = Symbol.for("react.memo"), y = Symbol.for("react.lazy"), _ = Symbol.iterator;
+  var a = Symbol.for("react.element"), b = Symbol.for("react.portal"), O = Symbol.for("react.fragment"), j = Symbol.for("react.strict_mode"), C = Symbol.for("react.profiler"), I = Symbol.for("react.provider"), E = Symbol.for("react.context"), v = Symbol.for("react.forward_ref"), p = Symbol.for("react.suspense"), k = Symbol.for("react.memo"), y = Symbol.for("react.lazy"), _ = Symbol.iterator;
   function h(e) {
     return e === null || typeof e != "object" ? null : (e = _ && e[_] || e["@@iterator"], typeof e == "function" ? e : null);
   }
@@ -13,25 +13,25 @@ function Z() {
   }, enqueueForceUpdate: function() {
   }, enqueueReplaceState: function() {
   }, enqueueSetState: function() {
-  } }, D = Object.assign, L = {};
-  function v(e, t, n) {
-    this.props = e, this.context = t, this.refs = L, this.updater = n || R;
+  } }, N = Object.assign, U = {};
+  function m(e, t, n) {
+    this.props = e, this.context = t, this.refs = U, this.updater = n || R;
   }
-  v.prototype.isReactComponent = {}, v.prototype.setState = function(e, t) {
+  m.prototype.isReactComponent = {}, m.prototype.setState = function(e, t) {
     if (typeof e != "object" && typeof e != "function" && e != null)
       throw Error("setState(...): takes an object of state variables to update or a function which returns an object of state variables.");
     this.updater.enqueueSetState(this, e, t, "setState");
-  }, v.prototype.forceUpdate = function(e) {
+  }, m.prototype.forceUpdate = function(e) {
     this.updater.enqueueForceUpdate(this, e, "forceUpdate");
   };
-  function U() {
+  function L() {
   }
-  U.prototype = v.prototype;
+  L.prototype = m.prototype;
   function P(e, t, n) {
-    this.props = e, this.context = t, this.refs = L, this.updater = n || R;
+    this.props = e, this.context = t, this.refs = U, this.updater = n || R;
   }
-  var g = P.prototype = new U();
-  g.constructor = P, D(g, v.prototype), g.isPureReactComponent = !0;
+  var g = P.prototype = new L();
+  g.constructor = P, N(g, m.prototype), g.isPureReactComponent = !0;
   var V = Array.isArray, F = Object.prototype.hasOwnProperty, q = { current: null }, M = { key: !0, ref: !0, __self: !0, __source: !0 };
   function B(e, t, n) {
     var u, o = {}, c = null, f = null;
@@ -51,13 +51,13 @@ function Z() {
         o[u] === void 0 && (o[u] = s[u]);
     return { $$typeof: a, type: e, key: c, ref: f, props: o, _owner: q.current };
   }
-  function G(e, t) {
+  function K(e, t) {
     return { $$typeof: a, type: e.type, key: t, ref: e.ref, props: e.props, _owner: e._owner };
   }
   function A(e) {
     return typeof e == "object" && e !== null && e.$$typeof === a;
   }
-  function K(e) {
+  function Q(e) {
     var t = { "=": "=0", ":": "=2" };
     return "$" + e.replace(/[=:]/g, function(n) {
       return t[n];
@@ -65,7 +65,7 @@ function Z() {
   }
   var J = /\/+/g;
   function T(e, t) {
-    return typeof e == "object" && e !== null && e.key != null ? K("" + e.key) : t.toString(36);
+    return typeof e == "object" && e !== null && e.key != null ? Q("" + e.key) : t.toString(36);
   }
   function x(e, t, n, u, o) {
     var c = typeof e;
@@ -89,7 +89,7 @@ function Z() {
     if (f)
       return f = e, o = o(f), e = u === "" ? "." + T(f, 0) : u, V(o) ? (n = "", e != null && (n = e.replace(J, "$&/") + "/"), x(o, t, n, "", function(d) {
         return d;
-      })) : o != null && (A(o) && (o = G(o, n + (!o.key || f && f.key === o.key ? "" : ("" + o.key).replace(J, "$&/") + "/") + e)), t.push(o)), 1;
+      })) : o != null && (A(o) && (o = K(o, n + (!o.key || f && f.key === o.key ? "" : ("" + o.key).replace(J, "$&/") + "/") + e)), t.push(o)), 1;
     if (f = 0, u = u === "" ? "." : u + ":", V(e))
       for (var s = 0; s < e.length; s++) {
         c = e[s];
@@ -111,7 +111,7 @@ function Z() {
       return t.call(n, c, o++);
     }), u;
   }
-  function Q(e) {
+  function X(e) {
     if (e._status === -1) {
       var t = e._result;
       t = t(), t.then(function(n) {
@@ -124,7 +124,7 @@ function Z() {
       return e._result.default;
     throw e._result;
   }
-  var l = { current: null }, $ = { transition: null }, X = { ReactCurrentDispatcher: l, ReactCurrentBatchConfig: $, ReactCurrentOwner: q };
+  var l = { current: null }, $ = { transition: null }, Z = { ReactCurrentDispatcher: l, ReactCurrentBatchConfig: $, ReactCurrentOwner: q };
   return r.Children = { map: w, forEach: function(e, t, n) {
     w(e, function() {
       t.apply(this, arguments);
@@ -142,10 +142,10 @@ function Z() {
     if (!A(e))
       throw Error("React.Children.only expected to receive a single React element child.");
     return e;
-  } }, r.Component = v, r.Fragment = O, r.Profiler = C, r.PureComponent = P, r.StrictMode = j, r.Suspense = p, r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = X, r.cloneElement = function(e, t, n) {
+  } }, r.Component = m, r.Fragment = O, r.Profiler = C, r.PureComponent = P, r.StrictMode = j, r.Suspense = p, r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = Z, r.cloneElement = function(e, t, n) {
     if (e == null)
       throw Error("React.cloneElement(...): The argument must be a React element, but you passed " + e + ".");
-    var u = D({}, e.props), o = e.key, c = e.ref, f = e._owner;
+    var u = N({}, e.props), o = e.key, c = e.ref, f = e._owner;
     if (t != null) {
       if (t.ref !== void 0 && (c = t.ref, f = q.current), t.key !== void 0 && (o = "" + t.key), e.type && e.type.defaultProps)
         var s = e.type.defaultProps;
@@ -170,9 +170,9 @@ function Z() {
   }, r.createRef = function() {
     return { current: null };
   }, r.forwardRef = function(e) {
-    return { $$typeof: m, render: e };
+    return { $$typeof: v, render: e };
   }, r.isValidElement = A, r.lazy = function(e) {
-    return { $$typeof: y, _payload: { _status: -1, _result: e }, _init: Q };
+    return { $$typeof: y, _payload: { _status: -1, _result: e }, _init: X };
   }, r.memo = function(e, t) {
     return { $$typeof: k, type: e, compare: t === void 0 ? null : t };
   }, r.startTransition = function(e) {
@@ -217,40 +217,42 @@ function Z() {
   }, r.version = "18.2.0", r;
 }
 var H;
-function ee() {
+function te() {
   return H || (H = 1, function(a) {
-    a.exports = Z();
-  }(N)), N.exports;
+    a.exports = ee();
+  }(D)), D.exports;
 }
 var W;
-function te() {
+function re() {
   if (W)
     return S;
   W = 1;
-  var a = ee(), b = Symbol.for("react.element"), O = Symbol.for("react.fragment"), j = Object.prototype.hasOwnProperty, C = a.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, I = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function E(m, p, k) {
+  var a = te(), b = Symbol.for("react.element"), O = Symbol.for("react.fragment"), j = Object.prototype.hasOwnProperty, C = a.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, I = { key: !0, ref: !0, __self: !0, __source: !0 };
+  function E(v, p, k) {
     var y, _ = {}, h = null, R = null;
     k !== void 0 && (h = "" + k), p.key !== void 0 && (h = "" + p.key), p.ref !== void 0 && (R = p.ref);
     for (y in p)
       j.call(p, y) && !I.hasOwnProperty(y) && (_[y] = p[y]);
-    if (m && m.defaultProps)
-      for (y in p = m.defaultProps, p)
+    if (v && v.defaultProps)
+      for (y in p = v.defaultProps, p)
         _[y] === void 0 && (_[y] = p[y]);
-    return { $$typeof: b, type: m, key: h, ref: R, props: _, _owner: C.current };
+    return { $$typeof: b, type: v, key: h, ref: R, props: _, _owner: C.current };
   }
   return S.Fragment = O, S.jsx = E, S.jsxs = E, S;
 }
 (function(a) {
-  a.exports = te();
-})(Y);
-const re = Y.exports.jsxs;
+  a.exports = re();
+})(G);
+const Y = G.exports.jsxs;
 const ne = "0.0.1";
 function oe(a) {
-  return /* @__PURE__ */ re("div", { className: "App", children: [
-    "Inner app here ",
+  return /* @__PURE__ */ Y("div", { className: "App", children: [
+    "Inner app: USER_ID 👉 ",
     a.user.userId,
-    "v",
-    ne
+    /* @__PURE__ */ Y("div", { children: [
+      "v",
+      ne
+    ] })
   ] });
 }
 export {
