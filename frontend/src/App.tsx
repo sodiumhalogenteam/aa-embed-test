@@ -14,13 +14,22 @@ function App(props: AppProps) {
             path="/"
             element={
               <>
-                <h3>Home Child Application {VERSION}</h3>
+                <h3>Child Application v{VERSION}</h3>
                 <br />
-                <Link to={"/test"}>click messs!</Link>
+                <Link to={"/test"}>click me</Link>
               </>
             }
           />
-          <Route path="/test" element={<h3>sub app routing workssss!</h3>} />
+          <Route
+            path="/test"
+            element={
+              <>
+                <p>Sub route /test</p>
+                <br />
+                <Link to={"/"}>Go Back</Link>
+              </>
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>
