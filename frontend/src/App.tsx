@@ -8,7 +8,7 @@ interface AppProps {
 function App(props: AppProps) {
   return (
     <BrowserRouter>
-      <div className="App" id="new-features">
+      <div className="App">
         <Routes>
           <Route
             path="/"
