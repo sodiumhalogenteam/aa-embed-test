@@ -7,8 +7,9 @@ interface AppProps {
 }
 function App(props: AppProps) {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/new-features">
       <div className="App">
+        Embed App
         <Routes>
           <Route
             path="/"
@@ -24,9 +25,10 @@ function App(props: AppProps) {
             path="/test"
             element={
               <>
-                <p>Sub route /test</p>
+                <p>Sub route /test here</p>
                 <br />
                 <Link to={"/"}>Go Back</Link>
+                <button onClick={() => window.location.reload()}>reload</button>
               </>
             }
           />
