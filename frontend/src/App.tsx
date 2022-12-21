@@ -15,7 +15,7 @@ function App(props: AppProps) {
             path="/"
             element={
               <>
-                <h3>Child Application v{VERSION}</h3>
+                <h3>Child Application v{VERSION} here</h3>
                 <br />
                 <Link to={"/test"}>click me</Link>
               </>
