@@ -28,6 +28,7 @@ function App(props: AppProps) {
                 <p>Sub route /test here</p>
                 <br />
                 <Link to={"/"}>Go Back</Link>
+                <br />
                 <button onClick={() => window.location.reload()}>reload</button>
               </>
             }
